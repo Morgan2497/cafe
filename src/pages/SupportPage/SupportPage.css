@@ -1,0 +1,74 @@
+.support-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f0f2f5;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.support-card {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 500px;
+}
+
+.support-card h2 {
+  margin-bottom: 8px;
+  font-size: 1.8rem;
+  color: #222;
+}
+
+.support-subtitle {
+  margin-bottom: 24px;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.support-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.support-form label {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.support-form input,
+.support-form select,
+.support-form textarea {
+  margin-top: 6px;
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  transition: border 0.2s ease;
+}
+
+.support-form input:focus,
+.support-form select:focus,
+.support-form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.support-form button {
+  padding: 12px;
+  font-size: 1rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.support-form button:hover {
+  background: #0056b3;
+}

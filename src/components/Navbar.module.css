@@ -1,0 +1,49 @@
+/* src/components/Navbar/Navbar.module.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #111; /* Dark background like Nike */
+    color: #fff;
+  }
+  
+  .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .navLinks {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navLinks button,
+  .userActions button {
+    background: none;
+    border: none;
+    color: #ddd;
+    font-size: 1em;
+    cursor: pointer;
+    padding: 8px 12px;
+    transition: color 0.3s ease;
+  }
+  
+  .navLinks button:hover,
+  .userActions button:hover {
+    color: #fff;
+  }
+  
+  .userActions {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .cartIcon {
+    font-size: 1.5em;
+  }

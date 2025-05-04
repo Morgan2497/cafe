@@ -1,0 +1,69 @@
+.items-page {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+.items-page h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.4rem;
+}
+
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(220px, 1fr) );
+  gap: 24px;
+}
+
+.item-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+}
+
+.item-card:hover {
+  transform: translateY(-5px);
+}
+
+.item-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.item-details {
+  padding: 16px;
+  text-align: center;
+}
+
+.item-details h3 {
+  margin: 0 0 8px;
+  font-size: 1.2rem;
+}
+
+.item-details p {
+  margin: 0 0 12px;
+  color: #555;
+}
+
+.item-details button {
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.item-details button:hover {
+  background: #0056b3;
+}

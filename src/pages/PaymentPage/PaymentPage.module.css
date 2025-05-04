@@ -1,0 +1,183 @@
+/* ~/cafeteria/src/pages/Payment/PaymentPage.module.css */
+
+.paymentContainer {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 16px; /* Increased border-radius for a softer look */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); /* More pronounced shadow */
+    font-family: 'Segoe UI', Arial, sans-serif; /* Modern font */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Add transitions */
+  }
+  
+  .paymentContainer:hover {
+    transform: translateY(-4px); /* Slight lift on hover */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); /* Increased shadow on hover */
+  }
+  
+  .paymentTitle {
+    font-size: 3rem; /* Larger title */
+    margin-bottom: 40px; /* Increased margin */
+    color: #2c3e50; /* Darker, more sophisticated color */
+    letter-spacing: -0.02em;
+    font-weight: 600; /* Use 600 for a strong bold */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05); /* Subtle text shadow */
+  }
+  
+  .paymentForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px; /* Increased margin */
+  }
+  
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 30px; /* Increased margin */
+    width: 100%;
+    max-width: 450px; /* Slightly wider form group */
+  }
+  
+  .formGroup label {
+    margin-bottom: 12px; /* Increased margin */
+    color: #34495e; /* Darker label color */
+    font-weight: 500; /* Medium font weight for labels */
+    font-size: 1.1rem; /* Slightly larger label font */
+    transition: color 0.3s ease; /* Smooth transition for label color */
+  }
+  
+  .formGroup label:hover {
+    color: #2c3e50; /* Darker on hover */
+  }
+  
+  .formGroup input {
+    padding: 15px; /* Increased padding */
+    border: 1px solid #e0e0e0; /* Lighter border */
+    border-radius: 8px; /* More rounded corners */
+    font-size: 1.2rem; /* Larger input font */
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
+    background-color: white; /* Ensure white background for inputs */
+    color: #2c3e50; /* Darker input text */
+  }
+  
+  .formGroup input:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.15); /* Refined focus shadow */
+  }
+  
+  .formGroup input::placeholder {
+    color: #bdc3c7; /* Lighter placeholder color */
+    font-weight: 400;
+  }
+  
+  .paymentButtons {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    width: 100%;
+    max-width: 450px; /* Match form group width */
+  }
+  
+  .paymentButtons button,
+  .paymentButtons a {
+    padding: 15px 30px; /* Increased padding */
+    border: none;
+    border-radius: 10px; /* More rounded corners */
+    font-size: 1.2rem; /* Larger button font */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease; /* Added transform */
+    text-decoration: none;
+    margin: 0 15px; /* Increased margin */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* More pronounced shadow */
+    display: inline-flex; /* Use inline-flex for better alignment */
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .paymentButtons button:hover,
+  .paymentButtons a:hover {
+    transform: translateY(-4px); /* Increased lift on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Increased shadow on hover */
+  }
+  
+  .paymentButtons a {
+    background-color: #3498db; /* Blue for "Back" */
+    color: white;
+  }
+  
+  .paymentButtons a:hover {
+    background-color: #2980b9; /* Darker blue */
+  }
+  
+  .paymentButtons button {
+    background-color: #2ecc71; /* Green for "Confirm" */
+    color: white;
+  }
+  
+  .paymentButtons button:hover {
+    background-color: #27ae60; /* Darker green */
+  }
+  
+  .paymentButtons button:disabled {
+    background-color: #95a5a6; /* Gray for disabled */
+    cursor: not-allowed;
+    opacity: 0.7;
+    box-shadow: none;
+    transform: none;
+  }
+  
+  .paymentMessage {
+    margin-top: 40px; /* Increased margin */
+    padding: 25px; /* Increased padding */
+    border-radius: 12px; /* More rounded corners */
+    font-size: 1.2rem; /* Larger message font */
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out, pulse 2s infinite alternate; /* Keep pulse animation */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08); /* Add a subtle shadow */
+    border: 1px solid transparent;
+  }
+  
+  .paymentMessage p {
+    line-height: 1.7; /* Improved line height */
+    color: #2c3e50; /* Darker message text */
+  }
+  
+  
+  .paymentMessage.success {
+    background-color: #e6f4e5;
+    color: #27ae60;
+    border-color: #b0f0b0;
+  }
+  
+  .paymentMessage.error {
+    background-color: #fdedec;
+    color: #e74c3c;
+    border-color: #f8caca;
+  }
+  
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes pulse {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.02);
+    }
+  }
+  
