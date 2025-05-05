@@ -1,0 +1,275 @@
+.checkout-container {
+  font-family: 'Helvetica Neue', sans-serif;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.checkout-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #111;
+  margin-bottom: 30px;
+}
+
+.checkout-loading {
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 50px;
+}
+
+.checkout-content {
+  display: flex;
+  gap: 40px;
+}
+
+.checkout-left,
+.checkout-right {
+  flex: 1;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border 0.2s;
+}
+
+input:focus {
+  border-color: #111;
+  outline: none;
+}
+
+.error {
+  background: #ffe5e5;
+  color: #c00;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #111;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #333;
+}
+
+.summary {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 1px #eee;
+}
+
+.summary-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  gap: 15px;
+}
+
+.summary-item img {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.summary-item h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #111;
+}
+
+.summary-item p {
+  margin: 5px 0 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.subtotal {
+  margin-left: auto;
+  font-weight: bold;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-top: 10px;
+  border-top: 2px solid #ddd;
+}
+
+.confirmation {
+  text-align: center;
+  padding: 40px;
+}
+
+.confirmation h2 {
+  color: #111;
+  font-size: 2rem;
+}
+
+.confirmation p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* Checkout Steps Progress */
+.checkout-steps {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.checkout-steps::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  right: 20px;
+  height: 2px;
+  background-color: #e0e0e0;
+  z-index: 1;
+}
+
+.checkout-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.step-number {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.step-title {
+  font-size: 0.85rem;
+  color: #666;
+  text-align: center;
+  max-width: 100px;
+}
+
+.checkout-step.active .step-number {
+  background-color: #6772e5;
+  color: white;
+}
+
+.checkout-step.active .step-title {
+  color: #333;
+  font-weight: 500;
+}
+
+.checkout-step.completed .step-number {
+  background-color: #4caf50;
+  color: white;
+}
+
+.payment-section {
+  margin-top: 20px;
+}
+
+/* Order totals section */
+.order-totals {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 2px solid #ddd;
+}
+
+.subtotal-row, .shipping-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.shipping-row {
+  color: #666;
+}
+
+.shipping-placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding-top: 10px;
+  border-top: 2px solid #333;
+}
+
+.total-amount {
+  color: #2c3e50;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .checkout-content {
+    flex-direction: column;
+  }
+  
+  .checkout-left,
+  .checkout-right {
+    width: 100%;
+  }
+  
+  .checkout-right {
+    margin-top: 30px;
+  }
+  
+  .step-title {
+    font-size: 0.75rem;
+    max-width: 80px;
+  }
+
+  .checkout-steps {
+    gap: 0.5rem;
+  }
+}
